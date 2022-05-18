@@ -10,15 +10,14 @@ function clima(){
         var bg = document.getElementById('clima-bg');
         
         if(current_time > 30){
-            bg.src = "assets/images/undraw_beach_rvmg.svg"
+            bg.src = "assets/images/music file2-02.svg"
         }else{
-            bg.src = "assets/images/undraw_modern_woman_re_d8bx.svg"
+            bg.src = "assets/images/music file2-01.svg"
         }
-        
+
         const temp = document.getElementById('currenty');
-
+ 
         temp.innerText = current_time + ' °C';
-
 
     }).catch(error => {
         console.error('Error:', error);
