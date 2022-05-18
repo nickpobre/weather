@@ -4,10 +4,8 @@ function clima(){
         return response_.json()
     })
     .then( clima => {
-        const daily_ = clima.daily;
         const data_ = clima.current_weather;
         const current_time =  data_.temperature;
-        const daily_time = daily_.time
 
         var bg = document.getElementById('clima-bg');
         
@@ -17,13 +15,8 @@ function clima(){
             bg.src = "assets/images/undraw_modern_woman_re_d8bx.svg"
         }
         
-        const dia = document.getElementById('next-day');
         const temp = document.getElementById('currenty');
-        
-        for( var i = 0; i < 3; i++){
-            dia.innerText = daily_time[i];
-        } 
-        
+
         temp.innerText = current_time + ' °C';
 
 
